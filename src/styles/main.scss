@@ -1,0 +1,56 @@
+@use 'variaveis' as *;
+@use 'mixins' as *;
+@use 'hero';
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Avenir;
+    src: url(../../assets/fonts/Avenir-Bold.woff2);
+    font-weight: 700;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $corDeFundo;
+    font-family: Avenir, sans-serif
+}
+
+.title--big {
+    @include title($fontSizeTitleBig);
+}
+
+.title {
+    @include title($fontSizeTitle);
+}
+
+.title--small {
+    @include title($fontSizeTitleSmall);
+}
+
+.text--big {
+    @include text($fontSizeTextBig);
+}
+
+.text {
+    @include text($fontSizeText);
+}
+
+.text--small {
+    @include text($fontSizeTextSmall);
+}
+
+.link-text {
+    @include text($fontSizeTextBig);
+    color: $corTextoSecundario;
+    text-decoration: underline;
+}
