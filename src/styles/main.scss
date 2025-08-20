@@ -6,6 +6,7 @@
 @use 'devices';
 @use 'faq';
 @use 'footer';
+@use 'header';
 
 @font-face {
     font-family: Avenir;
@@ -23,7 +24,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Avenir, sans-serif
+    font-family: Avenir, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -66,12 +68,19 @@ body {
     height: 60px;
     font-size: $fontSizeTextBig;
     color: $corTextoSecundario;
-    background-color: #6421ff;
+    background-color: $corBotaoPrimario;
     text-transform: uppercase;
     border-radius: 4px;
-    margin-top: 2vw;
-    margin-bottom: 8px;
     cursor: pointer;
+    text-decoration: none;
+    padding: 8px 14px;
+    letter-spacing: 1px;
+    border: 1px solid $corBotaoPrimario;
+
+    &:hover {
+        background-color: $corBotaoPrimarioLighter;
+        transition: .5s;
+            }
 }
 
 .image-text-section {
@@ -111,4 +120,10 @@ body {
             width: 100%;
         }
     }
+}
+
+.hidden {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease, visibility 0s linear .5s;
 }

@@ -1,0 +1,68 @@
+@use 'variaveis' as *;
+
+.header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: $corDeFundo;
+    z-index: 1;
+    transition: background-color .5s ease;
+
+    &--is-hidden {
+        background-color: transparent;
+        transition: background-color .5s ease, opacity .5s ease;
+    }
+
+    &__container {
+        padding: 8px 36px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        max-width: 80px;
+        width: 100%;
+        margin: 5px;
+        transition: opacity .5s ease;
+    }
+
+    &__links {
+        display: flex;
+
+        &__item {
+            margin: 5px;
+
+            .header__button {
+                height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &:hover {
+                    transition: .5s;
+                }
+
+                &__1 {
+                    background-color: $corBotaoSecundario;
+                    border-color: $corBotaoSecundario;
+                    transition: opacity .5s ease;
+
+                    &:hover {
+                        background-color: $corBotaoSecundarioLighter;
+                    }
+                }
+
+                &__2 {
+                    background-color: $corBotaoTerciario;
+                    border-color: $corTextoSecundario;
+
+                    &:hover {
+                        background-color: $corTextoSecundario;
+                        color: $corBotaoTerciario;
+                        border-color: $corBotaoTerciario;
+                    }
+                }   
+            }
+        }
+    }
+}
