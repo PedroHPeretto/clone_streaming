@@ -1,0 +1,52 @@
+@use 'variaveis' as *;
+
+.faq {
+    padding: 5.6vw;
+
+    h2 {
+        text-align: center;
+        margin-bottom: 24px;
+    }
+
+    &__list {
+
+
+        &__item {
+            background-color: #13151d;
+            margin-bottom: 16px;
+
+            &__question {
+                color: #fff;
+                font-size: 20px;
+                padding: 24px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+
+                button {
+                    content: '+';
+                    position: absolute;
+                    top: 0;
+                    right: 24px;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    font-size: 40px;
+                    background: none;
+                    border: none;
+                    color: #fff;
+                    cursor: pointer;
+                }
+            }
+
+            &__answer {
+                padding: 24px;
+                display: none;
+
+                &--is-open {
+                    display: block;
+                }
+            }
+        }
+    }
+}
