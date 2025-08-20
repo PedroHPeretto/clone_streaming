@@ -37,6 +37,15 @@
                     color: #fff;
                     cursor: pointer;
                 }
+
+                @media (max-width: 767px) {
+                    font-size: 14px;
+
+                    button {
+                        font-size: 28px;
+                        right: 14px;
+                    }
+                }
             }
 
             &__answer {

@@ -12,6 +12,14 @@
         justify-content: space-around;
         margin-top: 50px;
 
+        @media(max-width: 767px) {
+            display: block;
+        }
+
+        .button {
+            margin-top: 24px;
+        }
+
         &__item {
             text-align: center;
             padding: 60px 44px 44px ;
@@ -31,6 +39,11 @@
             strong {
             display: block;
             margin-top: 24px;
+            }
+
+            @media (max-width: 767px) {
+                display: flex;
+                flex-direction: column;
             }
         }
     }
